@@ -1,0 +1,172 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Sedgwick Ave Display", cursive;
+  height: 100vh;
+  overflow: hidden;
+  color: white;
+  background-color: black;
+.wrap {
+  position: absolute;
+  width: 900px;
+  margin: 0 auto;
+  top: 50%;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  -webkit-transform: translateY(-25%);
+  -moz-transform: translateY(-25%);
+  -ms-transform: translateY(-25%);
+  -o-transform: translateY(-25%);
+  transform: translateY(-25%);
+}
+.wrap header {
+  text-align: center;
+}
+.wrap header h1 {
+  font-size: 5rem;
+  margin-bottom: 3rem;
+  background: -webkit-linear-gradient(top, #bde7f2 0%, #35acbb 29%, #35acbb 42%, #a8dbe3 66%, #356f8a 84%, #356f8a 84%);
+  background: linear-gradient(to bottom, #bde7f2 0%, #35acbb 29%, #35acbb 42%, #a8dbe3 66%, #356f8a 84%, #356f8a 84%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#bde7f2", endColorstr="#356f8a", GradientType=0 );
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+.wrap header h1.correct {
+  background: -webkit-linear-gradient(top, #bdf2bd 0%, #35bb48 29%, #35bb48 42%, #b2e3a8 66%, #3f8a35 84%, #3f8a35 84%);
+  background: linear-gradient(to bottom, #bdf2bd 0%, #35bb48 29%, #35bb48 42%, #b2e3a8 66%, #3f8a35 84%, #3f8a35 84%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#bdf2bd", endColorstr="#3f8a35", GradientType=0 );
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+.wrap header h1.correct:after {
+  background: none;
+  content: attr(data-text);
+  left: 0;
+  right: 0;
+  position: absolute;
+  text-shadow: 3px 4px 1px #166f0a;
+  top: 0;
+  z-index: -1;
+}
+.wrap header h1.wrong {
+  background: -webkit-linear-gradient(top, #f2bdbd 0%, #bb3535 29%, #bb3535 42%, #e3a8a8 66%, #8a3535 84%, #8a3535 84%);
+  background: linear-gradient(to bottom, #f2bdbd 0%, #bb3535 29%, #bb3535 42%, #e3a8a8 66%, #8a3535 84%, #8a3535 84%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#f2bdbd", endColorstr="#8a3535", GradientType=0 );
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+.wrap header h1.wrong:after {
+  background: none;
+  content: attr(data-text);
+  left: 0;
+  right: 0;
+  position: absolute;
+  text-shadow: 3px 4px 1px #6f0a0a;
+  top: 0;
+  z-index: -1;
+}
+.wrap header h1:after {
+  background: none;
+  content: attr(data-text);
+  left: 0;
+  right: 0;
+  position: absolute;
+  text-shadow: 3px 4px 1px #0b4e65;
+  top: 0;
+  z-index: -1;
+}
+.wrap .calculator {
+  margin: auto;
+  width: 600px;
+}
+.wrap .calculator input {
+  width: 80px;
+  height: 80px;
+  font-size: 4rem;
+  border: 0;
+  margin-left: 30px;
+  outline: transprent;
+  background: #ffc4e9;
+  background: -moz-linear-gradient(top, #ffc4e9 0%, #fc97ca 46%, #fd0884 100%);
+  background: -webkit-linear-gradient(top, #ffc4e9 0%, #fc97ca 46%, #fd0884 100%);
+  background: linear-gradient(to bottom, #ffc4e9 0%, #fc97ca 46%, #fd0884 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#ffc4e9", endColorstr="#fd0884", GradientType=0 );
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  border-radius: 30px;
+  line-height: 60px;
+  text-align: center;
+  font-family: "Sedgwick Ave Display", cursive;
+}
+.wrap .calculator input:focus {
+  border: 0;
+  outline-style: solid;
+  outline-color: #ffc4e9;
+  outline-width: thin;
+}
+.wrap .calculator input:after {
+  background: none;
+  content: attr(data-text);
+  left: 0;
+  right: 0;
+  position: absolute;
+  text-shadow: 2px 1px 2px black;
+  top: 0;
+  z-index: -3;
+}
+.wrap .calculator input::-webkit-inner-spin-button, .wrap .calculator input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+.wrap .calculator span {
+  margin-left: 30px;
+  display: inline-block;
+  position: relative;
+  font-size: 4rem;
+  background: #f92f45;
+  background: -moz-linear-gradient(top, #f92f45 0%, #fe5518 29%, #ffa83c 48%, #ea3900 66%, #db0a21 81%);
+  background: -webkit-linear-gradient(top, #f92f45 0%, #fe5518 29%, #ffa83c 48%, #ea3900 66%, #db0a21 81%);
+  background: linear-gradient(to bottom, #f92f45 0%, #fe5518 29%, #ffa83c 48%, #ea3900 66%, #db0a21 81%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#f92f45", endColorstr="#db0a21", GradientType=0 );
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+.wrap .calculator span:after {
+  background: none;
+  content: attr(data-text);
+  left: 0;
+  right: 0;
+  position: absolute;
+  text-shadow: 2px 1px 2px black;
+  top: 0;
+  z-index: -3;
+}
+.wrap .calculator span.input {
+  width: 80px;
+  margin: 0;
+}
+.wrap .calculator span.input:after {
+  left: 50px;
+  top: 8px;
+}
+.wrap .calculator span.result {
+  background: #ffc4e9;
+  background: -moz-linear-gradient(top, #ffc4e9 0%, #fc97ca 46%, #fd0884 100%);
+  background: -webkit-linear-gradient(top, #ffc4e9 0%, #fc97ca 46%, #fd0884 100%);
+  background: linear-gradient(to bottom, #ffc4e9 0%, #fc97ca 46%, #fd0884 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#ffc4e9", endColorstr="#fd0884", GradientType=0 );
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
